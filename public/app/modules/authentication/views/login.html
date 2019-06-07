@@ -1,0 +1,25 @@
+<div class="carousel slide carousel-fade" data-ride="carousel">
+	<div class="carousel-inner" role="listbox">
+		<div class="item active"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+	</div>
+</div>
+</br>
+</br>
+</br>
+<div class="container">
+	<form class="form-signin" name="form" ng-submit="login()" >
+		<h1 class="form-signin-heading text-muted">Cineteca</h1>
+		<input type="text" class="form-control" placeholder="User" required
+			autofocus="autofocus" ng-model="username"
+			oninvalid="this.setCustomValidity('User required')" /> 
+		<input
+			type="password" class="form-control" placeholder="Password" required
+			ng-model="password"
+			oninvalid="this.setCustomValidity('Password required')" />
+		<button type="submit" class="btn btn-lg btn-primary btn-block">Login</button>
+	</form>
+</div>

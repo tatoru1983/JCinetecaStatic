@@ -1,0 +1,170 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#app/login"><span class="glyphicon glyphicon-log-out"></span>  Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="detailmainpanel">
+    <div>
+    <a class="btn btn-info btn-lg">
+        <span class="glyphicon glyphicon-arrow-left" ng-click="back();"></span>
+      </a>
+    </div>
+</br>
+<div class="container detaititlelpanel">
+    <h1 class="display-1">{{detail.TITLE_ITA}}</h1>
+    <h3 class="display-3">{{detail.TITLE}}</h3>
+</div>
+</div>
+<div class="detailmainpanel2">
+<div class="container detailpanel">
+    <form>
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            <img ng-src="{{detail.POSTER}}" alt="Poster" />
+        </div>
+        <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span class="label">Anno:</span>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <span class="value">{{detail.YEAR}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span class="label">Rated:</span>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <span class="value">{{detail.RATED}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span class="label">Durata:</span>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <span class="value">{{detail.RUNTIME}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span class="label">Genere:</span>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <span class="value">{{detail.GENRE}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span class="label">Regista:</span>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <span class="value">{{detail.DIRECTOR}}</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span class="label">Sceneggiatore:</span>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <span class="value">{{detail.WRITER}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span class="label">Attori:</span>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <span class="value">{{detail.ACTORS}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span class="label">Trama:</span>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <span class="value">{{detail.PLOT}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span class="label">Lingua:</span>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <span class="value">{{detail.LANGUAGE}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span class="label">Paese:</span>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <span class="value">{{detail.COUNTRY}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span class="label">Premi:</span>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <span class="value">{{detail.AWARDS}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span class="label">Produzione:</span>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <span class="value">{{detail.PRODUCTION}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <br>
+            </div>
+            <div class="row">
+                <br>
+            </div>
+            <!--<div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <span class="label">Visto:</span>
+                        </div>
+                        <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                        <label class="switch">
+                            <input type="checkbox" ng-model="seen" ng-change="updateSeen();">
+                            <span class="slider round"></span>
+                    </label>
+                  </div>
+            </div>-->
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="row">
+                <span class="label">Valutazione:</span>
+                <table class="tabledash tabledash-rounded table-hover">
+                        <thead>
+                                <th class="thdashsite">Sito</th>
+                                <th class="thdashvalue">Valore</th>
+                        </thead>
+                        <tr ng-repeat="row in ratings">
+                            <td>{{row.SOURCE}}</td>
+                            <td>{{row.VALUE}}</td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+</div>

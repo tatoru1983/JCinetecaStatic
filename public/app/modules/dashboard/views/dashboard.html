@@ -1,0 +1,90 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#app/login"><span class="glyphicon glyphicon-log-out"></span>  Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="dashboardmainpanel">
+<div id="carousel-dash" class="carousel-dash slide" data-ride="carousel-dash">
+    <div class="carousel-dash-inner" role="listbox">
+        <div class="item active">
+            <img src="../images/cinema-navbar3.jpg" alt="Image">
+            <div class="carousel-caption">
+                <h3>Film</h3>
+                <p>DVD</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mainpanel">
+    <form class="form-inline">
+        <div class="container filterpanel form-group">
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                    <span class="label">Titolo:</span>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <input type="text" id="title" class="form-control" ng-model="titleFilter">
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                    <span class="label">DVD:</span>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <input type="number" id="dvd" class="form-control" ng-model="dvdFilter">
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right">
+                    <button class="btn btn-lg btn-basic" type="submit" ng-click="search()">Search</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container mainpanel">
+    <div class="container tablepanel">
+        <table class="tabledash tabledash-rounded table-hover">
+            <thead>
+                <tr>
+                    <th class="thdash thdashtitle" ng-click="orderByField='TITLE_TITLE'; reverseSort = !reverseSort">Titolo</th>
+                    <th class="thdash thdashyear" ng-click="orderByField='YEAR'; reverseSort = !reverseSort">Anno</th>
+                    <th class="thdash thdashgenre" ng-click="orderByField='GENRE'; reverseSort = !reverseSort">Genere</th>
+                    <th class="thdash thdashrating" ng-click="orderByField='IMDBRATING'; reverseSort = !reverseSort">Valutazione</th>
+                    <th class="thdash thdashaward" ng-click="orderByField='AWARDS'; reverseSort = !reverseSort">Premi</th>
+                    <th class="thdash thdashdetail">Dettaglio</th>
+                </tr>
+            </thead>
+            <!--<tr ng-repeat="row in data.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | orderBy:orderByField:reverseSort">-->
+			<tr ng-repeat="row in data | orderBy:orderByField:reverseSort">
+                <td class="thdashtitle">{{row.TITLE_ITA}}</td>
+                <td class="thdashyear">{{row.YEAR}}</td>
+                <td class="thdashgenre">{{row.GENRE}}</td>
+                <td class="thdashrating">{{row.IMDBRATING}}</td>
+                <td class="thdashaward">{{row.AWARDS}}</td>
+                <td class="thdashdetail">
+                    <a class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-film" ng-click="detail(row.IMDBID)"></span>
+                  </a>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    </div>
+<footer class="container-fluid text-center">
+    <div>
+        <h3><i>"{{aforisma.AFORISMA}}"</i></h3>
+        <p>{{aforisma.FONTE}}</p>
+    </div>
+</footer>
+</div>
