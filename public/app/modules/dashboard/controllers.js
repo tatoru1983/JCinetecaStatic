@@ -14,7 +14,7 @@ function ($scope, $rootScope, $location, $http, $cookieStore, DashboardService, 
 		$scope.aforisma = response.data[indexAforismaRandom];
 	});
 
-	$http.get("../../json/movies.JSON").then(function(response){
+	$http.get("../../json/movies.json").then(function(response){
 		$scope.allmovies = response.data;
 	});
 
